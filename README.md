@@ -6,18 +6,22 @@ Realized by Keras+tensorflow
 
 # 文件结构
 
--data
-  └─ocean_sub1
-    ├─results
-    │  ├─prediction
-    │  └─unet.hdf5
-    ├─test
-    └─train
-      ├─image
-      └─label
--main.py
--data.py
--model.py
+data.py
+main.py
+model.py
+requirements.txt
+data
+    └─ocean_sub1
+        ├─results
+        │  │  Model accuracy.png
+        │  │  Model loss.png
+        │  │  unet.hdf5
+        │  │  
+        │  └─prediction
+        ├─test
+        └─train
+            ├─image
+            └─label
 
 
 # 预测方式
