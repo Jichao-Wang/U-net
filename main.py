@@ -32,6 +32,7 @@ def draw_history(history):
 
 
 data_set = 'data/' + 'ocean_sub1/'  # 'membrane/' 'ocean_sub1/' 'ocean/'
+test_number = 10
 
 data_gen_args = dict(rotation_range=0.2,
                      width_shift_range=0.05,
@@ -48,8 +49,8 @@ history = model.fit(myGene, steps_per_epoch=10, epochs=10, callbacks=[model_chec
 draw_history(history)
 
 model = load_model(data_set + 'results/unet.hdf5')
-testGene = testGenerator(data_set + 'test', num_image=30)
-results = model.predict(testGene, steps=30, verbose=1)
+testGene = testGenerator(data_set + 'test', num_image=test_number)
+results = model.predict(testGene, steps=test_number, verbose=1)
 results_path = data_set + "results/prediction"
 if not os.path.exists(results_path):
     os.makedirs(results_path)
