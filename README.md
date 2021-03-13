@@ -5,7 +5,7 @@ Realized by Keras+tensorflow
 见requirements.txt
 
 # 文件结构
-'''
+
 -data
   └─ocean_sub1
     ├─results
@@ -18,7 +18,7 @@ Realized by Keras+tensorflow
 -main.py
 -data.py
 -model.py
-'''
+
 
 # 预测方式
 直接运行main.py即可加载训练好的模型进行识别
