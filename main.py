@@ -43,11 +43,11 @@ data_gen_args = dict(rotation_range=0.2,
 myGene = trainGenerator(2, data_set + 'train', 'image', 'label', data_gen_args, save_to_dir=None)
 model = unet()
 # plot_model(model, to_file='results/model_structure.png')
-model_checkpoint = ModelCheckpoint(data_set + 'results/mid.hdf5', monitor='loss', verbose=1, save_best_only=True)
+model_checkpoint = ModelCheckpoint(data_set + 'results/unet.hdf5', monitor='loss', verbose=1, save_best_only=True)
 history = model.fit(myGene, steps_per_epoch=10, epochs=10, callbacks=[model_checkpoint])  # 300
 draw_history(history)
 
-model = load_model(data_set + 'results/mid.hdf5')
+model = load_model(data_set + 'results/unet.hdf5')
 testGene = testGenerator(data_set + 'test', num_image=30)
 results = model.predict(testGene, steps=30, verbose=1)
 results_path = data_set + "results/prediction"
