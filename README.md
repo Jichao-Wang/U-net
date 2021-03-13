@@ -6,12 +6,14 @@ Realized by Keras+tensorflow
 
 # 文件结构
 -data
----ocean_sub1
-------train
-------test
-------results
----------prediction
----------unet.hdf5
+  └─ocean_sub1
+    ├─results
+    │  ├─prediction
+    │  └─unet.hdf5
+    ├─test
+    └─train
+      ├─image
+      └─label
 -main.py
 -data.py
 -model.py
